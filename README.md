@@ -60,3 +60,44 @@ Detailed exploration of the dataset to uncover patterns, insights, and trends re
   - **Seasonal Pattern:** December exhibits the highest number of content additions, indicating a focus on the winter season.
   - **TV Show Seasons:** A significant proportion of TV shows have only one season, suggesting a preference for shorter series.
   - **Movie Durations:** The majority of movies fall within the 60 to 120-minute range, reflecting a preference for standard-length films.
+
+
+## Feature Engineering
+**1. Attributes for clustering:**
+
+Cast, country, genre, director, rating, and description.
+
+**2. Textual Data Preprocessing:**
+  - Expand Contraction
+  - Remove stopwords and lower case
+  - Removing Punctuations
+  - Lemmatization
+  - Tokenization
+  - Text Vectorization
+
+**3. Dimesionality Reduction:**
+
+Dimensionality reduction was achieved through Principal Component Analysis (PCA), wherein the number of components was restricted to 4000, effectively capturing over 80% of the variance in the data.
+
+## ML Model Implementation
+The implementation of machine learning models, specifically K-Means and Hierarchical Clustering, to categorize and cluster similar content. The optimal number of clusters and effective algorithms are determined through rigorous analysis.
+
+**3.1. K Means Clustering:**
+- The optimal number of clusters were built after visualizing the elbow curve and the Silhouette score.
+- Highest Silhouette score is obtained for 6 clusters using k-means clustering. Hence, the number of clusters for k-means clustering was taken as 6.
+- Silhouette score at 6 clusters: 0.0082
+
+**3.2. Hierarchical Clustering:**
+- Clusters were built using the Agglomerative clustering algorithm, and the optimal number of clusters were built after visualizing the dendogram.
+- From the dendogram, at an Euclidean distance of 3.8 units, 12 clusters can be built. Hence the number of clusters were taken as 12.
+- Algorithm: Agglomerative clustering
+- Distance: Euclidean
+- Linkage: Ward
+
+## Recommendation System
+Utilizing the insights gained from clustering, a content-based recommender system is developed. The system leverages cosine similarity and the generated similarity matrix to provide personalized content recommendations.
+
+## Conclusion
+Summarizes the key findings, contributions, and potential business impacts of the project, highlighting the advancements in content categorization and recommendation for Netflix Movies and TV Shows.
+
+Feel free to explore, contribute, and provide feedback for continuous improvement!
